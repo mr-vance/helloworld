@@ -20,11 +20,20 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - node-v1-
       - run:
-          name: "Install dependencies"
+          name: "Install npm"
           command: npm install
       - run:
+          name: "Install npm test"
+          command: npm install test
+      - run:
+          name: "Install npm jest"
+          command: npm install jest
+      - run:
+          name: "Install node"
+          command: npm install node
+      - run:
           name: "Run tests"
-          command: npm test
+          command: npm test                   
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
