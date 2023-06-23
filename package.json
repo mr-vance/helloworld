@@ -2,6 +2,7 @@
   "dependencies": {
     "node": "^20.2.0",
     "nodejs": "^0.0.0",
+    "start": "^5.1.0",
     "test": "^3.3.0"
   },
   "scripts": {
