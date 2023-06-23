@@ -1,4 +1,4 @@
 # helloworld
 simple hello-world program
 
-[![mr-vance](https://circleci.com/gh/mr-vance/helloworld.svg?style=svg)](https://app.circleci.com/pipelines/github/mr-vance/helloworld?branch=circleci-project-setup)
+[![mr-vance](https://app.circleci.com/gh/mr-vance/helloworld/tree/circleci-project-setup.svg?style=svg)](https://app.circleci.com/gh/mr-vance/helloworld/?branch=circleci-project-setup)
