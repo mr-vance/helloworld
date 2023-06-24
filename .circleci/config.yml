@@ -27,7 +27,7 @@ jobs:
           name: "Run tests"
           command: npm test
       - codecov/upload:
-          token: f1f76835-da50-475a-bb37-4922ef5bf690
+          token: $CODECOV_TOKEN
 
 workflows:
   say-hello-workflow:
