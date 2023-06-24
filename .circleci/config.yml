@@ -15,7 +15,7 @@ jobs:
             - node-v1-{{ checksum "package.json" }}
             - node-v1-
       - run:
-          name: "Installl npm"
+          name: "Install npm"
           command: npm install
       - run:
           name: "Install npm test"
@@ -27,7 +27,7 @@ jobs:
           name: "Run tests"
           command: npm test
       - codecov/upload:
-          token: $CODECOV_TOKEN
+          token: f1f76835-da50-475a-bb37-4922ef5bf690
 
 workflows:
   say-hello-workflow:
