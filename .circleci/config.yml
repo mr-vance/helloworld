@@ -1,9 +1,10 @@
-
 version: 2.1
+
+orbs:
+  codecov: codecov/codecov@3.2.4
 
 jobs:
   say-hello:
-
     docker:
       - image: cimg/node:15.0.1
 
@@ -24,10 +25,11 @@ jobs:
           command: npm install node
       - run:
           name: "Run tests"
-          command: npm test                   
+          command: npm test
+      - codecov/upload:
+          token: $CODECOV_TOKEN
 
 workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-  
