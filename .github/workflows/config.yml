@@ -1,0 +1,30 @@
+version: 2.1
+
+jobs:
+  say-hello:
+
+    docker:
+      - image: cimg/node:15.0.1
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-v1-{{ checksum "package.json" }}
+            - node-v1-
+      - run:
+          name: "Install npm"
+          command: npm install
+      - run:
+          name: "Run tests"
+          command: npm test
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+workflows:
+  say-hello-workflow:
+    jobs:
+      - say-hello
