@@ -1,4 +1,9 @@
-version: 2.1
+name: Say Hello Workflow
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   say-hello:
@@ -24,8 +29,3 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-
-workflows:
-  say-hello-workflow:
-    jobs:
-      - say-hello
